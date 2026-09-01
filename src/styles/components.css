@@ -1,0 +1,138 @@
+.bp-heading { color: var(--text-primary); letter-spacing: -0.01em; }
+.bp-heading--1 { font-size: clamp(2rem, 7vw, 3rem); }
+.bp-heading--2 { font-size: clamp(1.5rem, 5vw, 2rem); }
+.bp-heading--3 { font-size: clamp(1.15rem, 4vw, 1.4rem); }
+.bp-subheading { color: var(--text-secondary); font-size: 1.05rem; margin: var(--space-2) 0 0; font-weight: var(--weight-body); }
+
+.bp-card {
+  background: var(--bg-card);
+  border: var(--card-border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.bp-btn {
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-5);
+  font-size: 1.1rem;
+  font-weight: 700;
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  transition: transform 0.15s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease);
+  color: var(--bg-main);
+  background: var(--accent-cyan);
+}
+.bp-btn:hover { transform: translateY(-2px); }
+.bp-btn:active { transform: translateY(0); }
+.bp-btn--primary {
+  background: linear-gradient(135deg, var(--accent-cyan), #6cf6ff);
+  box-shadow: var(--neon-glow);
+}
+.bp-btn--secondary {
+  background: transparent;
+  color: var(--accent-cyan);
+  border: 2px solid var(--accent-cyan);
+  box-shadow: none;
+}
+.bp-btn--ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 2px solid rgba(138, 138, 163, 0.3);
+  box-shadow: none;
+}
+.bp-btn--block { width: 100%; }
+.bp-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+.bp-field { display: flex; flex-direction: column; gap: var(--space-2); }
+.bp-field__label { font-weight: 700; font-size: 1rem; }
+.bp-field__hint { color: var(--text-secondary); font-size: 0.9rem; }
+.bp-input, .bp-textarea {
+  width: 100%;
+  background: var(--bg-main);
+  border: 2px solid rgba(138, 138, 163, 0.25);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1.05rem;
+  padding: var(--space-3);
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.bp-input:focus, .bp-textarea:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.25);
+}
+.bp-textarea { min-height: 120px; resize: vertical; line-height: 1.5; }
+
+.bp-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: rgba(0, 240, 255, 0.12);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+}
+.bp-chip--magenta { background: rgba(255, 45, 149, 0.12); color: var(--accent-magenta); border-color: rgba(255, 45, 149, 0.3); }
+.bp-chip--muted { background: rgba(138, 138, 163, 0.12); color: var(--text-secondary); border-color: rgba(138, 138, 163, 0.25); }
+
+.bp-difficulty { display: flex; flex-direction: column; gap: var(--space-2); }
+.bp-diff-option {
+  width: 100%;
+  text-align: right;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 2px solid rgba(138, 138, 163, 0.2);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+}
+.bp-diff-option[aria-pressed="true"] {
+  border-color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.18);
+}
+
+.bp-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-secondary);
+  border: 2px dashed rgba(138, 138, 163, 0.35);
+  border-radius: var(--radius);
+  background: rgba(138, 138, 163, 0.05);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.bp-player-list { display: flex; flex-direction: column; gap: var(--space-2); }
+.bp-player-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--bg-main);
+  border: 1px solid rgba(138, 138, 163, 0.15);
+}
+.bp-player-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 1.1rem;
+  background: rgba(0, 240, 255, 0.15);
+  color: var(--accent-cyan);
+}

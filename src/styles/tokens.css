@@ -1,0 +1,24 @@
+:root {
+  --bg-main: #0a0a14;
+  --bg-card: #16162a;
+  --accent-cyan: #00f0ff;
+  --accent-magenta: #ff2d95;
+  --text-primary: #f2f2f7;
+  --text-secondary: #8a8aa3;
+  --font-family: 'Heebo', system-ui, -apple-system, sans-serif;
+  --weight-body: 400;
+  --weight-heading: 800;
+  --radius: 20px;
+  --radius-sm: 12px;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --neon-glow: 0 0 24px rgba(0, 240, 255, 0.45), 0 0 48px rgba(0, 240, 255, 0.22);
+  --magenta-glow: 0 0 24px rgba(255, 45, 149, 0.4);
+  --card-border: 1px solid rgba(138, 138, 163, 0.18);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
