@@ -8,4 +8,26 @@ services:
       - "3000:3000"
     environment:
       - BASE44_PUBLIC_HOST_SUFFIX=${BASE44_PUBLIC_HOST_SUFFIX}
+      - API_PROXY_TARGET=http://api:8787
+    depends_on:
+      - api
     command: sh -c "npm install && npm run dev -- --host 0.0.0.0 --port 3000"
+
+  # LLM proxy. Holds the API key so the browser never sees it.
+  # Zero npm dependencies — Node 22 built-ins only, so no install step.
+  api:
+    image: node:22-slim
+    working_dir: /app
+    volumes:
+      - ./:/app
+      # Platform-provided secrets. Read-only, outside the repo, outside git.
+      - /run/base44:/run/base44:ro
+    expose:
+      - "8787"
+    environment:
+      - PORT=8787
+      - APP_ENV_FILE=/run/base44/app.env
+      - LLM_PROVIDER=${LLM_PROVIDER:-}
+      - LLM_API_KEY=${LLM_API_KEY:-}
+      - LLM_MODEL=${LLM_MODEL:-}
+    command: sh -c "node server/index.js"

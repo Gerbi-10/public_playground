@@ -2,5 +2,5 @@
   "previewPort": 3000,
   "healthPath": "/",
   "startCommand": "docker compose -f docker-compose.base44.yml up -d",
-  "secrets": []
+  "secrets": ["LLM_PROVIDER", "LLM_API_KEY", "LLM_MODEL"]
 }
