@@ -1,15 +1,66 @@
+/* Design tokens — light, playful, vibrant.
+   Refactor: dark cyberpunk -> white canvas + vibrant multi-color accents. */
 :root {
-  --bg-main: #0a0a14;
-  --bg-card: #16162a;
-  --accent-cyan: #00f0ff;
-  --accent-magenta: #ff2d95;
-  --text-primary: #f2f2f7;
-  --text-secondary: #8a8aa3;
+  /* Surfaces */
+  --bg-main: #ffffff;
+  --bg-soft: #f7f8fd;
+  --bg-card: #ffffff;
+  --bg-tint: #f2f0ff;
+
+  /* Vibrant palette */
+  --c-purple: #7c3aed;
+  --c-violet: #a855f7;
+  --c-pink: #ff2d95;
+  --c-coral: #ff6b6b;
+  --c-orange: #ff8a3d;
+  --c-yellow: #ffc93c;
+  --c-lime: #a3e635;
+  --c-green: #22c55e;
+  --c-teal: #14b8a6;
+  --c-cyan: #00c2ff;
+  --c-blue: #3b82f6;
+
+  /* Semantic accents */
+  --accent-1: var(--c-purple);
+  --accent-2: var(--c-pink);
+  --accent-3: var(--c-cyan);
+  --accent-4: var(--c-yellow);
+  --accent-5: var(--c-lime);
+
+  /* Back-compat aliases (old dark-theme names) */
+  --accent-cyan: var(--c-cyan);
+  --accent-magenta: var(--c-pink);
+
+  /* Text */
+  --text-primary: #171733;
+  --text-secondary: #6b6b8a;
+  --text-muted: #9a9ab5;
+  --text-on-accent: #ffffff;
+
+  /* Gradients */
+  --grad-hero: linear-gradient(135deg, #7c3aed 0%, #ff2d95 48%, #ff8a3d 100%);
+  --grad-cool: linear-gradient(135deg, #00c2ff 0%, #7c3aed 100%);
+  --grad-warm: linear-gradient(135deg, #ffc93c 0%, #ff6b6b 100%);
+  --grad-mint: linear-gradient(135deg, #a3e635 0%, #14b8a6 100%);
+  --grad-candy: linear-gradient(135deg, #ff2d95 0%, #a855f7 100%);
+  --grad-rainbow: linear-gradient(
+    90deg,
+    #7c3aed, #ff2d95, #ff8a3d, #ffc93c, #a3e635, #00c2ff, #7c3aed
+  );
+
+  /* Type */
   --font-family: 'Heebo', system-ui, -apple-system, sans-serif;
   --weight-body: 400;
-  --weight-heading: 800;
-  --radius: 20px;
-  --radius-sm: 12px;
+  --weight-medium: 500;
+  --weight-bold: 700;
+  --weight-heading: 900;
+
+  /* Shape */
+  --radius: 24px;
+  --radius-sm: 14px;
+  --radius-pill: 999px;
+
+  /* Spacing */
   --space-1: 8px;
   --space-2: 12px;
   --space-3: 16px;
@@ -17,8 +68,20 @@
   --space-5: 32px;
   --space-6: 48px;
   --space-7: 64px;
-  --neon-glow: 0 0 24px rgba(0, 240, 255, 0.45), 0 0 48px rgba(0, 240, 255, 0.22);
-  --magenta-glow: 0 0 24px rgba(255, 45, 149, 0.4);
-  --card-border: 1px solid rgba(138, 138, 163, 0.18);
+
+  /* Elevation (soft, light-theme friendly) */
+  --shadow-sm: 0 2px 8px rgba(23, 23, 51, 0.06);
+  --shadow-md: 0 10px 28px rgba(23, 23, 51, 0.08);
+  --shadow-lg: 0 20px 48px rgba(23, 23, 51, 0.12);
+  --shadow-pop: 0 8px 0 rgba(124, 58, 237, 0.22);
+  --shadow-pop-pink: 0 8px 0 rgba(255, 45, 149, 0.22);
+  --glow-purple: 0 0 0 6px rgba(124, 58, 237, 0.12);
+  --glow-pink: 0 0 0 6px rgba(255, 45, 149, 0.12);
+
+  --border-soft: 1px solid rgba(23, 23, 51, 0.08);
+  --border-strong: 2px solid rgba(23, 23, 51, 0.1);
+
+  /* Motion */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
